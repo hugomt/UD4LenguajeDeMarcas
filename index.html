@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <link rel="stylesheet" href="css\styles.css">
+  <link rel="stylesheet" href="css\lightbox.min.css.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+  * {
+    font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+    margin: 0;
+  }
+
+  body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2)), url(https://nuevopuertadehierro.com/web/wp-content/uploads/2022/01/renders_nuevo_puerta_de_hierro6-1024x576.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  .firstDiv {
+    background-color: rgba(40, 40, 43, 255);
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+  }
+
+  button {
+    color: white;
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    padding: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .joinButton {
+    margin-left: 40px;
+    font-weight: 400;
+  }
+
+  .contactButton {
+    margin-left: 40px;
+    font-weight: 400;
+  }
+
+  .clientButton {
+    margin-right: 40px;
+    font-weight: 400;
+  }
+
+  button:hover {
+    border-bottom: 2px solid white;
+    border-collapse: collapse;
+    height: auto;
+    cursor: pointer;
+  }
+
+  header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .secondsButtons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 7px;
+    margin-left: 80px;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 14px;
+    color: white;
+
+
+  }
+
+  h1 {
+    font-family: "Playfair Display", Georgia, serif;
+    color: white;
+
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .arrow {
+    margin-left: 10px;
+    height: 15px;
+    width: 15px;
+    padding: 0;
+    filter: brightness(200%);
+  }
+
+
+  .secondsButtons:hover {
+    border-bottom: 3px solid grey;
+    border-collapse: collapse;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 112px;
+    margin-left: 215px;
+    position: relative;
+  }
+
+  .secondLine {
+    margin-left: 20px;
+    margin-right: 20px;
+    border: 1px solid rgba(173, 174, 179);
+    background-color: rgba(173, 174, 179);
+    border-collapse: collapse;
+  }
+
+  .position {
+    display: flex;
+    flex-direction: column;
+    width: 80px;
+    margin-top: 150px;
+    margin-left: 140px;
+    position: absolute;
+  }
+
+  .title {
+    font-size: 50px;
+    width: 450px;
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 200;
+    margin-bottom: 20px;
+  }
+
+  .txtdescription {
+    font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+    color: white;
+    width: 420px;
+    font-weight: 250;
+    line-height: 27px;
+  }
+
+  .txtdesign {
+    font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+    color: white;
+    width: 820px;
+    font-weight: 250;
+    line-height: 27px;
+  }
+
+  h2 {
+    border-bottom: 1px solid #918750;
+    border-collapse: collapse;
+    font-weight: 600;
+    font-size: 10px;
+    color: white;
+  }
+
+  .rightArrow {
+    height: 10px;
+    width: 20px;
+    margin-left: 10px;
+    filter: brightness(180%);
+  }
+
+  .lastDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 150px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+
+  .secondNav {
+    display: none;
+
+
+  }
+
+  .menuImage {
+    width: 30px;
+    height: 30px;
+    margin-left: 210px;
+    margin-top: 5px;
+  }
+
+
+
+  h3 {
+    color: white;
+
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .sidebar {
+    background-color: rgba(21, 22, 28, 255);
+    position: absolute;
+    z-index: 999;
+    padding: 20px;
+    display: flex;
+    top: 0;
+    width: 30%;
+    height: 30%;
+    left: 100%;
+    transition: .5s left;
+    border-bottom: 2px solid grey;
+    border-left: 2px solid grey;
+    flex-direction: column;
+
+  }
+
+  .sidebar.open {
+    left: 70%;
+  }
+
+  .closeImage {
+
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    margin-left: 1px;
+    margin-top: 1px;
+
+  }
+
+  .divCloseImage {
+    height: 30px;
+    width: 1000px;
+    margin-bottom: 5px;
+    display: flex;
+
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    border: 1px solid black;
+    width: 200px;
+    margin-top: 130px;
+    margin-left: 189px;
+  }
+
+  .dropdown-content.open {
+    display: block;
+  }
+
+  .dropdown-menu {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        background-color: rgba(21, 22, 28, 255);
+    }
+
+    .dropdown-menu li {
+        padding: 10px;
+        border-bottom: 2px solid #80808024;
+        color: white;
+    }
+
+    .dropdown-menu li:hover {
+        background-color: rgba(111, 126, 143, 255);
+        cursor: pointer;
+        color: white;
+    }
+
+    .dropdown-menu li:last-child {
+        border-bottom: none;
+    }
+
+  .arrow-up {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0px;
+    opacity: 0;
+    transition: .4s opacity;
+  }
+
+  .arrow-up.visible {
+    opacity: 1;
+  }
+
+  .containers {
+    height: 300px;
+  }
+
+  .divMenu {
+    display: flex;
+    align-self: left;
+  }
+
+  .vistaProyecto {
+    background-color: rgba(40, 40, 43, 255);
+    width: 100%;
+    height: 2000px;
+    margin-top: 50px;
+    display: flex;
+
+    align-content: center;
+   
+    flex-direction: column;
+
+  }
+
+  .titleDesign {
+    align-self: center;
+    margin-top: 100px;
+
+  }
+
+  .prgphDesign {
+
+    margin-top: 40px;
+    width: 600px;
+   
+    height: 50%;
+    font-size: 19px;
+   
+
+
+
+  }
+
+
+
+
+
+
+  @media (max-width: 980px) {
+    .position {
+      margin-left: 10px;
+    }
+
+    section {
+      margin-left: 100px;
+    }
+  }
+
+  @media (max-width: 600px) {
+
+    .firstDiv {
+      display: none;
+    }
+
+
+    .h1 {
+      margin-left: 10px;
+      display: flex;
+    }
+
+   
+
+    nav {
+      display: none;
+    }
+
+    .secondNav {
+      display: flex;
+      align-items: center;
+
+      cursor: pointer;
+    }
+  }
+
+
+
+  body {
+    overflow-x: hidden;
+    box-sizing: border-box;
+
+  }
+
+  .gallery-container {
+    width: 80%;
+    margin: 100px auto;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 300px);
+  }
+
+  .gallery-container .gallery-card {
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 10px;
+  }
+
+  .gallery-container .gallery-card a {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+
+  }
+
+  .gallery-container .gallery-card a>img {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+
+  }
+
+  .logo:hover {
+    cursor: pointer;
+
+  }
+
+  .divCarousel{
+    margin-bottom: 40px;
+    height: 60%;
+    width: 60%;
+    align-self: center;
+  }
+</style>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+
+  
+
+
+
+  function openSidebar() {
+    console.log('sidebar');
+    document.querySelector('.sidebar').classList.add('open');
+  }
+
+  function closeSidebar() {
+    console.log('sidebar');
+    document.querySelector('.sidebar').classList.remove('open');
+  }
+
+  function openDropdown() {
+    var dropdownContent = document.querySelector('.dropdown-content');
+    var svgIcon = document.querySelector('.my-svg');
+
+    var isOpen = dropdownContent.classList.contains('open');
+
+    if (isOpen) {
+      dropdownContent.classList.remove('open');
+      svgIcon.classList.remove('open');
+    } else {
+      dropdownContent.classList.add('open');
+      svgIcon.classList.add('open');
+    }
+  }
+
+  window.addEventListener('scroll', function (e) {
+    const arrow = document.querySelector('.arrow-up');
+    if (window.scrollY > 100) {
+      arrow.classList.add('visible');
+    } else {
+      arrow.classList.remove('visible');
+    }
+  });
+
+  function _scrollTop() {
+    window.scroll({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+</script>
+
+<body>
+  
+    <header class="firstDiv fixed-top">
+      <h1 class="logo" onclick="location.href='index.html'">Modern State</h1>
+      <nav>
+        <button class="secondsButtons">Incio</button>
+        <button class="secondsButtons">Proyectos en marcha <img class="arrow" onclick="openDropdown()"
+            src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2017/png/iconmonstr-arrow-65.png&r=156&g=156&b=156">
+        </button>
+        <button class="secondsButtons" onclick="location.href='visita.html'">Organiza tu visita</button>
+
+        <div class="dropdown-content">
+          <ul class="dropdown-menu">
+            <li>Proyecto Madrid</li>
+            <li>Proyecto Barcelona</li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+ 
+
+  <div class="secondNav firstDiv fixed-top">
+    <header>
+      <h1>Modern State</h1>
+
+
+      <img class="menuImage"
+        src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2013/png/iconmonstr-menu-1.png&r=135&g=135&b=135"
+        onclick="openSidebar()">
+  </div>
+  <div class="sidebar">
+    <div class="divCloseImage">
+        <img class="closeImage"
+            src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2017/png/iconmonstr-x-mark-11.png&r=173&g=173&b=173"
+            onclick="closeSidebar()">
+    </div>
+    <div class="divMenu">
+        <ul class="dropdown-menu">
+            <li>Inicio</li>
+            <li>Proyecto Madrid</li>
+            <li>Proyecto Barcelona</li>
+            <li>Visitanos</li>
+        </ul>
+    </div>
+</div>
+  </header>
+  </div>
+
+  <section>
+    <h1 class="title">Proyectos de lujo</h1>
+    <p class="txtdescription">
+      Modern State nace para ofrecer al comprador una vivienda de calidad, exclusiva y sostenible. Todas nuestras
+      construcciones son nuevas
+      y con las más innovadoras técnicas de construcción.
+    </p>
+
+    <img onclick="_scrollTop()" class="arrow-up"
+      src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2017/png/iconmonstr-arrow-70.png&r=255&g=255&b=255"
+      alt="">
+
+  </section>
+  <div class="containers"></div>
+
+  <div class="vistaProyecto">
+    <div class="titleDesign">
+      <h1>Expertos en el diseño</h1>
+    </div>
+    <div class="prgphDesign">
+
+      <p class="txtdesign"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+        nulla pariatur.
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna
+        aliqua</p>
+
+    </div>
+
+    
+
+      <div class="divCarousel"> 
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+          </ol>
+      
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <div class="item active">
+              <img src="images/madrid3.jpg" alt="1" style="width:100%;">
+            </div>
+      
+            <div class="item">
+              <img src="images/madrid5.jpg" alt="2" style="width:100%;">
+            </div>
+          
+            <div class="item">
+              <img src="images/madrid7.jpg" alt="3" style="width:100%;">
+            </div>
+
+            <div class="item">
+              <img src="images/madrid8.jpg" alt="3" style="width:100%;">
+            </div>
+          </div>
+      
+
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+
+      </div>
+
+      
+      
+     
+
+
+  </div>
+
+
+  
+   
+
+  <div class="containers"></div>
+ 
+</body>
+
+</html>
