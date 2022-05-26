@@ -159,7 +159,6 @@
   .txtdesign {
     font-family: "Fira Sans", Helvetica, Arial, sans-serif;
     color: white;
-    width: 820px;
     font-weight: 250;
     line-height: 27px;
   }
@@ -218,7 +217,7 @@
     display: flex;
     top: 0;
     width: 30%;
-    height: 30%;
+    height: 32%;
     left: 100%;
     transition: .5s left;
     border-bottom: 2px solid grey;
@@ -262,28 +261,39 @@
     display: block;
   }
 
-  .dropdown-menu {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        background-color: rgba(21, 22, 28, 255);
-    }
+  .dropdownMenu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(21, 22, 28, 255);
+    position: absolute;
+    left: 0;
+    z-index: 1000;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, .15);
+  }
 
-    .dropdown-menu li {
-        padding: 10px;
-        border-bottom: 2px solid #80808024;
-        color: white;
-    }
+  .dropdownMenu li {
+    padding: 10px;
+    border-bottom: 2px solid #80808024;
+    color: white;
+  }
 
-    .dropdown-menu li:hover {
-        background-color: rgba(111, 126, 143, 255);
-        cursor: pointer;
-        color: white;
-    }
+  .dropdownMenu li:hover {
+    background-color: rgba(111, 126, 143, 255);
+    cursor: pointer;
+    color: white;
+  }
 
-    .dropdown-menu li:last-child {
-        border-bottom: none;
-    }
+  .dropdownMenu li:last-child {
+    border-bottom: none;
+  }
 
   .arrow-up {
     width: 40px;
@@ -318,9 +328,7 @@
     height: 2000px;
     margin-top: 50px;
     display: flex;
-
     align-content: center;
-   
     flex-direction: column;
 
   }
@@ -332,16 +340,13 @@
   }
 
   .prgphDesign {
-
     margin-top: 40px;
-    width: 600px;
-   
+    display: flex;
+    align-self: center;
+    width: 65%;
     height: 50%;
     font-size: 19px;
-   
-
-
-
+    text-align: justify
   }
 
 
@@ -355,7 +360,8 @@
     }
 
     section {
-      margin-left: 100px;
+      margin-left: 80px;
+      margin-top: 80px;
     }
   }
 
@@ -365,13 +371,10 @@
       display: none;
     }
 
-
     .h1 {
       margin-left: 10px;
       display: flex;
     }
-
-   
 
     nav {
       display: none;
@@ -382,6 +385,17 @@
       align-items: center;
 
       cursor: pointer;
+    }
+
+    section {
+      margin-left: 50px;
+    }
+
+    .divCarousel {
+      margin-bottom: 40px;
+      height: 90%;
+      width: 90%;
+      align-self: center;
     }
   }
 
@@ -427,7 +441,7 @@
 
   }
 
-  .divCarousel{
+  .divCarousel {
     margin-bottom: 40px;
     height: 60%;
     width: 60%;
@@ -440,7 +454,7 @@
 
 <script>
 
-  
+
 
 
 
@@ -487,25 +501,25 @@
 </script>
 
 <body>
-  
-    <header class="firstDiv fixed-top">
-      <h1 class="logo" onclick="location.href='index.html'">Modern State</h1>
-      <nav>
-        <button class="secondsButtons">Incio</button>
-        <button class="secondsButtons">Proyectos en marcha <img class="arrow" onclick="openDropdown()"
-            src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2017/png/iconmonstr-arrow-65.png&r=156&g=156&b=156">
-        </button>
-        <button class="secondsButtons" onclick="location.href='visita.html'">Organiza tu visita</button>
 
-        <div class="dropdown-content">
-          <ul class="dropdown-menu">
-            <li>Proyecto Madrid</li>
-            <li>Proyecto Barcelona</li>
-          </ul>
-        </div>
-      </nav>
-    </header>
- 
+  <header class="firstDiv fixed-top">
+    <h1 class="logo" onclick="location.href='index.html'">Modern State</h1>
+    <nav>
+      <button class="secondsButtons">Incio</button>
+      <button class="secondsButtons">Proyectos en marcha <img class="arrow" onclick="openDropdown()"
+          src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2017/png/iconmonstr-arrow-65.png&r=156&g=156&b=156">
+      </button>
+      <button class="secondsButtons" onclick="location.href='visita.html'">Organiza tu visita</button>
+
+      <div class="dropdown-content">
+        <ul class="dropdownMenu">
+          <li>Proyecto Madrid</li>
+          <li>Proyecto Barcelona</li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
 
   <div class="secondNav firstDiv fixed-top">
     <header>
@@ -518,19 +532,19 @@
   </div>
   <div class="sidebar">
     <div class="divCloseImage">
-        <img class="closeImage"
-            src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2017/png/iconmonstr-x-mark-11.png&r=173&g=173&b=173"
-            onclick="closeSidebar()">
+      <img class="closeImage"
+        src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2017/png/iconmonstr-x-mark-11.png&r=173&g=173&b=173"
+        onclick="closeSidebar()">
     </div>
     <div class="divMenu">
-        <ul class="dropdown-menu">
-            <li>Inicio</li>
-            <li>Proyecto Madrid</li>
-            <li>Proyecto Barcelona</li>
-            <li>Visitanos</li>
-        </ul>
+      <ul class="dropdownMenu">
+        <li>Inicio</li>
+        <li>Proyecto Madrid</li>
+        <li>Proyecto Barcelona</li>
+        <li>Visitanos</li>
+      </ul>
     </div>
-</div>
+  </div>
   </header>
   </div>
 
@@ -555,7 +569,8 @@
     </div>
     <div class="prgphDesign">
 
-      <p class="txtdesign"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+      <p class="txtdesign"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore
         et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
         ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
         nulla pariatur.
@@ -566,63 +581,63 @@
 
     </div>
 
-    
 
-      <div class="divCarousel"> 
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-          <!-- Indicators -->
-          <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-            <li data-target="#myCarousel" data-slide-to="3"></li>
-          </ol>
-      
-          <!-- Wrapper for slides -->
-          <div class="carousel-inner">
-            <div class="item active">
-              <img src="images/madrid3.jpg" alt="1" style="width:100%;">
-            </div>
-      
-            <div class="item">
-              <img src="images/madrid5.jpg" alt="2" style="width:100%;">
-            </div>
-          
-            <div class="item">
-              <img src="images/madrid7.jpg" alt="3" style="width:100%;">
-            </div>
 
-            <div class="item">
-              <img src="images/madrid8.jpg" alt="3" style="width:100%;">
-            </div>
+    <div class="divCarousel">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+          <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="item active">
+            <img src="images/madrid3.jpg" alt="1" style="width:100%;">
           </div>
-      
 
-          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"></span>
-            <span class="sr-only">Next</span>
-          </a>
+          <div class="item">
+            <img src="images/madrid5.jpg" alt="2" style="width:100%;">
+          </div>
+
+          <div class="item">
+            <img src="images/madrid7.jpg" alt="3" style="width:100%;">
+          </div>
+
+          <div class="item">
+            <img src="images/madrid8.jpg" alt="3" style="width:100%;">
+          </div>
         </div>
 
+
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <span class="sr-only">Next</span>
+        </a>
       </div>
 
-      
-      
-     
+    </div>
+
+
+
+
 
 
   </div>
 
 
-  
-   
+
+
 
   <div class="containers"></div>
- 
+
 </body>
 
 </html>
