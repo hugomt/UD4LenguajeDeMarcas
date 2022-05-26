@@ -199,7 +199,7 @@
     }
 
     .sidebar {
-        background-color: rgba(21, 22, 28, 255);
+        background-color: rgba(40,40,43,255);
         position: absolute;
         z-index: 999;
         padding: 20px;
@@ -237,21 +237,24 @@
     .dropdown-content {
         display: none;
         position: absolute;
-        border: 1px solid black;
-        width: 200px;
-        margin-top: 130px;
+        width: 160px;
+        margin-top: 177px;
         margin-left: 189px;
+        
+        
     }
 
     .dropdown-content.open {
         display: block;
+        
     }
 
     .dropdown-menu {
         list-style: none;
         margin: 0;
         padding: 0;
-        background-color: rgba(21, 22, 28, 255);
+        background-color: rgba(40,40,43,255);
+
     }
 
     .dropdown-menu li {
@@ -505,8 +508,8 @@
 
         <div class="dropdown-content">
             <ul class="dropdown-menu">
-                <li>Proyecto Madrid</li>
-                <li>Proyecto Barcelona</li>
+                <li onclick="location.href='proyectoMadrid.html'">Proyecto Madrid</li>
+                <li onclick="location.href='proyectoBarcelona.html'">Proyecto Barcelona</li>
             </ul>
         </div>
     </nav>
@@ -515,7 +518,7 @@
 
 <div class="secondNav firstDiv fixed-top">
     <header>
-        <h1>Modern State</h1>
+        <h1 onclick="location.href='index.html'">Modern State</h1>
 
 
         <img class="menuImage"
@@ -531,10 +534,10 @@
     </div>
     <div class="divMenu">
         <ul class="dropdown-menu">
-            <li>Inicio</li>
-            <li>Proyecto Madrid</li>
-            <li>Proyecto Barcelona</li>
-            <li>Visitanos</li>
+            <li onclick="location.href='index.html'">Inicio</li>
+        <li onclick="location.href='proyectoMadrid.html'">Proyecto Madrid</li>
+        <li onclick="location.href='proyectoBarcelona.html'">Proyecto Barcelona</li>
+        <li onclick="location.href='visita.html'">Visitanos</li>
         </ul>
     </div>
 </div>
