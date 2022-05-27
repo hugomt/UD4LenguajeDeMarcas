@@ -344,7 +344,7 @@
     display: flex;
     align-self: center;
     width: 65%;
-    height: 50%;
+    margin-bottom: 100px;
     font-size: 19px;
     text-align: justify
   }
@@ -447,6 +447,11 @@
     width: 60%;
     align-self: center;
   }
+
+  .thisPage{
+    border-bottom: 3px solid grey;
+    border-collapse: collapse;
+  }
 </style>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -505,7 +510,7 @@
   <header class="firstDiv fixed-top">
     <h1 class="logo" onclick="location.href='index.html'">Modern State</h1>
     <nav>
-      <button class="secondsButtons" onclick="location.href='index.html'">Incio</button>
+      <button class="secondsButtons thisPage" onclick="location.href='index.html'" >Incio</button>
       <button class="secondsButtons" onclick="openDropdown()">Proyectos en marcha <img class="arrow"
           onclick="openDropdown()"
           src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2017/png/iconmonstr-arrow-65.png&r=156&g=156&b=156">
