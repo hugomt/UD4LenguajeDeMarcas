@@ -521,6 +521,8 @@
       width: 90%;
       align-self: center;
     }
+
+    
   }
 
 
@@ -597,7 +599,23 @@ width: 260px;
 margin: 10px;
 }
 
+.column:hover{
+  cursor: pointer;
+  transform: scale(1.02);
+}
 
+.column img{
+height: 100%;
+width: 100%;
+object-fit: cover;
+object-position: center center;
+}
+
+.galleryMadrid{
+  height: 1100px;
+  background-color: #cfd2d6;
+ 
+}
 </style>
 
 
@@ -650,20 +668,28 @@ margin: 10px;
   </div>
   </header>
   </div>
-
+<div class="galleryMadrid">
   <div class="row">
-    <div class="column"></div>
-    <div class="column"></div>
-    <div class="column"></div>
-    <div class="column"></div>
+    <div class="column" onclick="location.href='images/madrid2.jpg'"><img src="images/madrid2.jpg"></div>
+    <div class="column" onclick="location.href='images/madrid9.jpg'"><img src="images/madrid9.jpg"></div>
+    <div class="column" onclick="location.href='images/madrid10.jpg'"><img src="images/madrid10.jpg"></div>
+    <div class="column" onclick="location.href='images/madrid4.jpg'"><img src="images/madrid4.jpg"></div>
   </div>
   
   <div class="row">
-    <div class="column"></div>
-    <div class="column"></div>
-    <div class="column"></div>
-    <div class="column"></div>
+    <div class="column" onclick="location.href='images/madrid8.jpg'"><img src="images/madrid8.jpg"></div>
+    <div class="column" onclick="location.href='images/madrid5.jpg'"><img src="images/madrid5.jpg"></div>
+    <div class="column" onclick="location.href='images/madrid6.jpg'"><img src="images/madrid6.jpg"></div>
+    <div class="column" onclick="location.href='images/madrid7.jpg'"><img src="images/madrid7.jpg"></div>
   </div>
+
+  <div class="row">
+    <div class="column" onclick="location.href='images/madrid3.jpg'"><img src="images/madrid3.jpg"></div>
+    <div class="column" onclick="location.href='images/madrid11.jpg'"><img src="images/madrid11.jpg"></div>
+    <div class="column" onclick="location.href='images/madrid12.jpg'"><img src="images/madrid12.jpg"></div>
+    <div class="column" onclick="location.href='images/madrid1.jpg'"><img src="images/madrid1.jpg"></div>
+  </div>
+</div>
 
   <section>
     <img onclick="_scrollTop()" class="arrow-up"
