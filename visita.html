@@ -12,13 +12,13 @@
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@200&family=Roboto+Flex:opsz,wght@8..144,200;8..144,400&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@200&family=Roboto+Flex:opsz,wght@8..144,200;8..144,400&display=swap');
 
-   
-  * {
-    font-family: "Fira Sans", Helvetica, Arial, sans-serif;
-    margin: 0;
-  }
+
+    * {
+        font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+        margin: 0;
+    }
 
     body {
         background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2)), url(https://nuevopuertadehierro.com/web/wp-content/uploads/2022/01/renders_nuevo_puerta_de_hierro6-1024x576.jpg);
@@ -92,10 +92,11 @@
         color: white;
     }
 
-    h1, h3 {
+    h1,
+    h3 {
         font-family: "Playfair Display", Georgia, serif;
-    color: white;
-    font-weight: lighter;
+        color: white;
+        font-weight: lighter;
 
     }
 
@@ -203,18 +204,18 @@
 
     .sidebar {
         background-color: rgba(40, 40, 43, 255);
-    position: absolute;
-    z-index: 999;
-    padding: 20px;
-    display: flex;
-    top: 0;
-    width: 30%;
-    height: 40%;
-    left: 100%;
-    transition: .5s left;
-    border-bottom: 2px solid grey;
-    border-left: 2px solid grey;
-    flex-direction: column;
+        position: absolute;
+        z-index: 999;
+        padding: 20px;
+        display: flex;
+        top: 0;
+        width: 30%;
+        height: 40%;
+        left: 100%;
+        transition: .5s left;
+        border-bottom: 2px solid grey;
+        border-left: 2px solid grey;
+        flex-direction: column;
     }
 
     .sidebar.open {
@@ -499,132 +500,147 @@
 
     }
 
-    .contactText{
-    font-size: 40px;
-}
+    .contactText {
+        font-size: 40px;
+    }
 
-    .thisPage{
-    border-bottom: 3px solid grey;
-    border-collapse: collapse;
-  }
+    .thisPage {
+        border-bottom: 3px solid grey;
+        border-collapse: collapse;
+    }
 
 
 
- 
 
-footer{
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(40, 40, 43, 255);
-    height: auto;
-    width: 100vw;
 
-    padding-top: 40px;
-    color: #fff;
-}
-.footer-content{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-}
-.footer-content h3{
-    font-size: 2.1rem;
-    font-weight: 500;
-    text-transform: capitalize;
-    line-height: 3rem;
-}
-.footer-content p{
-    max-width: 500px;
-    margin: 10px auto;
-    line-height: 28px;
-    font-size: 14px;
-    color: #cacdd2;
-}
-.socials{
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 1rem 0 3rem 0;
-}
-.socials li{
-    margin: 0 10px;
-}
-.socials a{
-    text-decoration: none;
-    color: #fff;
-    border: 1.1px solid white;
-    padding: 5px;
+    footer {
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(40, 40, 43, 255);
+        height: auto;
+        width: 100vw;
 
-    border-radius: 50%;
+        padding-top: 40px;
+        color: #fff;
+    }
 
-}
-.socials a i{
-    font-size: 1.1rem;
-    width: 20px;
-    transition: color .4s ease;
+    .footer-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
 
-}
-.socials a:hover i{
-    color: #BEB37F;
+    .footer-content h3 {
+        font-size: 2.1rem;
+        font-weight: 500;
+        text-transform: capitalize;
+        line-height: 3rem;
+    }
 
-}
+    .footer-content p {
+        max-width: 500px;
+        margin: 10px auto;
+        line-height: 28px;
+        font-size: 14px;
+        color: #cacdd2;
+    }
 
-.footer-bottom{
-  background: #111;
-    width: 100vw;
-    padding: 20px;
-padding-bottom: 40px;
-    text-align: center;
-}
-.footer-bottom p{
-    float: left;
-    font-size: 14px;
-    word-spacing: 2px;
-    text-transform: capitalize;
-    width: 190px;
-}
-.footer-bottom p a{
-  color:white;
-  font-size: 16px;
-  text-decoration: none;
-}
-.footer-bottom span{
-    text-transform: uppercase;
-    opacity: .4;
-    font-weight: 200;
-}
-.footer-menu{
-  float: right;
+    .socials {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1rem 0 3rem 0;
+    }
 
-}
-.footer-menu ul{
-  display: flex;
-}
-.footer-menu ul li{
-padding-right: 13px;
-display: block;
+    .socials li {
+        margin: 0 10px;
+    }
 
-}
-.footer-menu ul li a{
-  color: #cfd2d6;
-  text-decoration: none;
-}
-.footer-menu ul li a:hover{
-  color: #BEB37F;
-}
+    .socials a {
+        text-decoration: none;
+        color: #fff;
+        border: 1.1px solid white;
+        padding: 5px;
 
-@media (max-width:500px) {
-.footer-menu ul{
-  display: flex;
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
-}
+        border-radius: 50%;
 
+    }
+
+    .socials a i {
+        font-size: 1.1rem;
+        width: 20px;
+        transition: color .4s ease;
+
+    }
+
+    .socials a:hover i {
+        color: #BEB37F;
+
+    }
+
+    .footer-bottom {
+        background: #111;
+        width: 100vw;
+        padding: 20px;
+        padding-bottom: 40px;
+        text-align: center;
+    }
+
+    .footer-bottom p {
+        float: left;
+        font-size: 14px;
+        word-spacing: 2px;
+        text-transform: capitalize;
+        width: 190px;
+    }
+
+    .footer-bottom p a {
+        color: white;
+        font-size: 16px;
+        text-decoration: none;
+    }
+
+    .footer-bottom span {
+        text-transform: uppercase;
+        opacity: .4;
+        font-weight: 200;
+    }
+
+    .footer-menu {
+        float: right;
+
+    }
+
+    .footer-menu ul {
+        display: flex;
+    }
+
+    .footer-menu ul li {
+        padding-right: 13px;
+        display: block;
+
+    }
+
+    .footer-menu ul li a {
+        color: #cfd2d6;
+        text-decoration: none;
+    }
+
+    .footer-menu ul li a:hover {
+        color: #BEB37F;
+    }
+
+    @media (max-width:500px) {
+        .footer-menu ul {
+            display: flex;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+    }
 </style>
 
 
@@ -728,13 +744,14 @@ display: block;
 
     </div>
 
-   
+
 </body>
 
 <footer>
     <div class="footer-content">
         <h3>Modern State</h3>
-        <p>Competencia, exclusividad y pasión son los valores fundamentales de nuestra empresa, unos valores que se encuentran siempre en el corazón de todo lo que hacemos.</p>
+        <p>Competencia, exclusividad y pasión son los valores fundamentales de nuestra empresa, unos valores que se
+            encuentran siempre en el corazón de todo lo que hacemos.</p>
         <ul class="socials">
             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -744,18 +761,18 @@ display: block;
         </ul>
     </div>
     <div class="footer-bottom">
-        <p>copyright &copy; <a href="#">Modern State</a>  </p>
-                <div class="footer-menu">
-                  <ul class="f-menu">
-                 <li><a href="index.html">Inicio</a></li>
-                  <li><a href="proyectoMadrid.html" >Proyecto Madrid</a></li>
-                  <li><a href="proyectoBarcelona.html" >Proyecto Barcelona</a></li>
-                  <li style="margin-right: 60px"><a href="visita.html" >Organiza tu visita</a></li>
-                  </ul>
-                </div>
+        <p>copyright &copy; <a href="#">Modern State</a> </p>
+        <div class="footer-menu">
+            <ul class="f-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="proyectoMadrid.html">Proyecto Madrid</a></li>
+                <li><a href="proyectoBarcelona.html">Proyecto Barcelona</a></li>
+                <li style="margin-right: 60px"><a href="visita.html">Organiza tu visita</a></li>
+            </ul>
+        </div>
     </div>
-  
-  </footer>
+
+</footer>
 
 <script>
 

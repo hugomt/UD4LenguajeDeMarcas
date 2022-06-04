@@ -3,10 +3,7 @@
 
 <head>
   <link rel="stylesheet" href="css\styles.css">
-  <link rel="stylesheet" href="css\lightbox.min.css.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -265,7 +262,7 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    background-color: rgba(40,40,43,255);
+    background-color: rgba(40, 40, 43, 255);
     position: absolute;
     left: 0;
     z-index: 1000;
@@ -349,7 +346,7 @@
     text-align: justify
   }
 
-  footer{
+  footer {
     bottom: 0;
     left: 0;
     right: 0;
@@ -359,38 +356,44 @@
 
     padding-top: 40px;
     color: #fff;
-}
-.footer-content{
+  }
+
+  .footer-content {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     text-align: center;
-}
-.footer-content h3{
+  }
+
+  .footer-content h3 {
     font-size: 2.1rem;
     font-weight: 500;
     text-transform: capitalize;
     line-height: 3rem;
-}
-.footer-content p{
+  }
+
+  .footer-content p {
     max-width: 500px;
     margin: 10px auto;
     line-height: 28px;
     font-size: 14px;
     color: #cacdd2;
-}
-.socials{
+  }
+
+  .socials {
     list-style: none;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 1rem 0 3rem 0;
-}
-.socials li{
+  }
+
+  .socials li {
     margin: 0 10px;
-}
-.socials a{
+  }
+
+  .socials a {
     text-decoration: none;
     color: #fff;
     border: 1.1px solid white;
@@ -398,68 +401,78 @@
 
     border-radius: 50%;
 
-}
-.socials a i{
+  }
+
+  .socials a i {
     font-size: 1.1rem;
     width: 20px;
     transition: color .4s ease;
 
-}
-.socials a:hover i{
+  }
+
+  .socials a:hover i {
     color: #BEB37F;
 
-}
+  }
 
-.footer-bottom{
-  background: #111;
+  .footer-bottom {
+    background: #111;
     width: 100vw;
     padding: 20px;
-padding-bottom: 40px;
+    padding-bottom: 40px;
     text-align: center;
-}
-.footer-bottom p{
+  }
+
+  .footer-bottom p {
     float: left;
     font-size: 14px;
     word-spacing: 2px;
     text-transform: capitalize;
-}
-.footer-bottom p a{
-  color:white;
-  font-size: 16px;
-  text-decoration: none;
-}
-.footer-bottom span{
+  }
+
+  .footer-bottom p a {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+  }
+
+  .footer-bottom span {
     text-transform: uppercase;
     opacity: .4;
     font-weight: 200;
-}
-.footer-menu{
-  float: right;
+  }
 
-}
-.footer-menu ul{
-  display: flex;
-}
-.footer-menu ul li{
-padding-right: 13px;
-display: block;
+  .footer-menu {
+    float: right;
 
-}
-.footer-menu ul li a{
-  color: #cfd2d6;
-  text-decoration: none;
-}
-.footer-menu ul li a:hover{
-  color: #BEB37F;
-}
+  }
 
-@media (max-width:500px) {
-.footer-menu ul{
-  display: flex;
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
-}
+  .footer-menu ul {
+    display: flex;
+  }
+
+  .footer-menu ul li {
+    padding-right: 13px;
+    display: block;
+
+  }
+
+  .footer-menu ul li a {
+    color: #cfd2d6;
+    text-decoration: none;
+  }
+
+  .footer-menu ul li a:hover {
+    color: #BEB37F;
+  }
+
+  @media (max-width:500px) {
+    .footer-menu ul {
+      display: flex;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+  }
 
 
 
@@ -559,14 +572,142 @@ display: block;
     align-self: center;
   }
 
-  .thisPage{
+  .thisPage {
     border-bottom: 3px solid grey;
     border-collapse: collapse;
   }
+
+  /*
+  */
+
+
+.row{
+ height: 300px;
+ display:flex;
+ align-items: center;
+    justify-content: center;
+ 
+}
+
+.column{
+display:flex;
+background-color: white;
+height: 260px;
+width: 260px;
+margin: 10px;
+}
+
+
 </style>
 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+<body>
+
+  <header class="firstDiv fixed-top">
+    <h1 class="logo" onclick="location.href='index.html'">Modern State</h1>
+    <nav>
+      <button class="secondsButtons" onclick="location.href='index.html'">Incio</button>
+      <button class="secondsButtons thisPage" onclick="openDropdown()">Proyectos en marcha <img class="arrow"
+          onclick="openDropdown()"
+          src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2017/png/iconmonstr-arrow-65.png&r=156&g=156&b=156">
+      </button>
+      <button class="secondsButtons" onclick="location.href='visita.html'">Organiza tu visita</button>
+
+      <div class="dropdown-content">
+        <ul class="dropdownMenu">
+          <li onclick="location.href='proyectoMadrid.html'">Proyecto Madrid</li>
+          <li onclick="location.href='proyectoBarcelona.html'">Proyecto Barcelona</li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+
+  <div class="secondNav firstDiv fixed-top">
+    <header>
+      <h1 onclick="location.href='index.html'">Modern State</h1>
+
+
+      <img class="menuImage"
+        src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2013/png/iconmonstr-menu-1.png&r=135&g=135&b=135"
+        onclick="openSidebar()">
+  </div>
+  <div class="sidebar">
+    <div class="divCloseImage">
+      <img class="closeImage"
+        src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2017/png/iconmonstr-x-mark-11.png&r=173&g=173&b=173"
+        onclick="closeSidebar()">
+    </div>
+    <div class="divMenu">
+      <ul class="dropdownMenu">
+        <li onclick="location.href='index.html'">Inicio</li>
+        <li onclick="location.href='proyectoMadrid.html'">Proyecto Madrid</li>
+        <li onclick="location.href='proyectoBarcelona.html'">Proyecto Barcelona</li>
+        <li onclick="location.href='visita.html'">Visitanos</li>
+      </ul>
+    </div>
+  </div>
+  </header>
+  </div>
+
+  <div class="row">
+    <div class="column"></div>
+    <div class="column"></div>
+    <div class="column"></div>
+    <div class="column"></div>
+  </div>
+  
+  <div class="row">
+    <div class="column"></div>
+    <div class="column"></div>
+    <div class="column"></div>
+    <div class="column"></div>
+  </div>
+
+  <section>
+    <img onclick="_scrollTop()" class="arrow-up"
+      src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2017/png/iconmonstr-arrow-70.png&r=255&g=255&b=255"
+      alt="">
+  </section>
+
+
+
+
+
+
+
+
+</body>
+
+<footer>
+  <div class="footer-content">
+    <h3>Modern State</h3>
+    <p>Competencia, exclusividad y pasión son los valores fundamentales de nuestra empresa, unos valores que se
+      encuentran siempre en el corazón de todo lo que hacemos.</p>
+    <ul class="socials">
+      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+      <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+      <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+      <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    <p>copyright &copy; <a href="#">Modern State</a> </p>
+    <div class="footer-menu">
+      <ul class="f-menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="proyectoMadrid.html">Proyecto Madrid</a></li>
+        <li><a href="proyectoBarcelona.html">Proyecto Barcelona</a></li>
+        <li style="margin-right: 60px"><a href="visita.html">Organiza tu visita</a></li>
+      </ul>
+    </div>
+  </div>
+
+</footer>
+
+
 
 <script>
 
@@ -615,92 +756,5 @@ display: block;
     });
   }
 </script>
-
-<body>
-
-  <header class="firstDiv fixed-top">
-    <h1 class="logo" onclick="location.href='index.html'">Modern State</h1>
-    <nav>
-      <button class="secondsButtons" onclick="location.href='index.html'">Incio</button>
-      <button class="secondsButtons thisPage" onclick="openDropdown()">Proyectos en marcha <img class="arrow" onclick="openDropdown()"
-          src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2017/png/iconmonstr-arrow-65.png&r=156&g=156&b=156">
-      </button>
-      <button class="secondsButtons" onclick="location.href='visita.html'">Organiza tu visita</button>
-
-      <div class="dropdown-content">
-        <ul class="dropdownMenu">
-          <li onclick="location.href='proyectoMadrid.html'">Proyecto Madrid</li>
-          <li onclick="location.href='proyectoBarcelona.html'">Proyecto Barcelona</li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-
-
-  <div class="secondNav firstDiv fixed-top">
-    <header>
-      <h1 onclick="location.href='index.html'">Modern State</h1>
-
-
-      <img class="menuImage"
-        src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2013/png/iconmonstr-menu-1.png&r=135&g=135&b=135"
-        onclick="openSidebar()">
-  </div>
-  <div class="sidebar">
-    <div class="divCloseImage">
-      <img class="closeImage"
-        src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2017/png/iconmonstr-x-mark-11.png&r=173&g=173&b=173"
-        onclick="closeSidebar()">
-    </div>
-    <div class="divMenu">
-      <ul class="dropdownMenu">
-        <li onclick="location.href='index.html'">Inicio</li>
-        <li onclick="location.href='proyectoMadrid.html'">Proyecto Madrid</li>
-        <li onclick="location.href='proyectoBarcelona.html'">Proyecto Barcelona</li>
-        <li onclick="location.href='visita.html'">Visitanos</li>
-      </ul>
-    </div>
-  </div>
-  </header>
-  </div>
-
-  <section>
-    <img onclick="_scrollTop()" class="arrow-up"
-      src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2017/png/iconmonstr-arrow-70.png&r=255&g=255&b=255"
-      alt="">
-  </section>
-  <div class="containers"></div>
-
-  <div class="vistaProyecto"></div>
-
-  <div class="containers"></div>
-
-</body>
-
-<footer>
-  <div class="footer-content">
-      <h3>Modern State</h3>
-      <p>Competencia, exclusividad y pasión son los valores fundamentales de nuestra empresa, unos valores que se encuentran siempre en el corazón de todo lo que hacemos.</p>
-      <ul class="socials">
-          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-          <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-          <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-          <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-      </ul>
-  </div>
-  <div class="footer-bottom">
-      <p>copyright &copy; <a href="#">Modern State</a>  </p>
-              <div class="footer-menu">
-                <ul class="f-menu">
-                  <li><a href="index.html">Inicio</a></li>
-                  <li><a href="proyectoMadrid.html" >Proyecto Madrid</a></li>
-                  <li><a href="proyectoBarcelona.html" >Proyecto Barcelona</a></li>
-                  <li style="margin-right: 60px"><a href="visita.html" >Organiza tu visita</a></li>
-                </ul>
-              </div>
-  </div>
-
-</footer>
 
 </html>
