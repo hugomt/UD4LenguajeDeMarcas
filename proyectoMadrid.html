@@ -187,8 +187,6 @@
 
   .secondNav {
     display: none;
-
-
   }
 
   .menuImage {
@@ -202,8 +200,8 @@
 
   h3 {
     color: white;
-
-    font-size: 18px;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 2.1rem;
     font-weight: 400;
   }
 
@@ -221,7 +219,6 @@
     border-bottom: 2px solid grey;
     border-left: 2px solid grey;
     flex-direction: column;
-
   }
 
   .sidebar.open {
@@ -229,7 +226,6 @@
   }
 
   .closeImage {
-
     height: 20px;
     width: 20px;
     cursor: pointer;
@@ -272,7 +268,7 @@
     font-size: 14px;
     text-align: left;
     list-style: none;
-    background-clip: padding-box;
+    ackground-clip: padding-box;
 
   }
 
@@ -297,7 +293,7 @@
     height: 40px;
     position: fixed;
     right: 20px;
-    bottom: 20px;
+    bottom: 10px;
     cursor: pointer;
     background: none;
     border: none;
@@ -331,13 +327,11 @@
     display: flex;
     align-content: center;
     flex-direction: column;
-
   }
 
   .titleDesign {
     align-self: center;
     margin-top: 100px;
-
   }
 
   .prgphDesign {
@@ -370,7 +364,7 @@
   }
 
   .footer-content h3 {
-    font-size: 2.1rem;
+    font-size: 30px;
     font-weight: 500;
     text-transform: capitalize;
     line-height: 3rem;
@@ -401,9 +395,7 @@
     color: #fff;
     border: 1.1px solid white;
     padding: 5px;
-
     border-radius: 50%;
-
   }
 
   .socials a i {
@@ -415,7 +407,6 @@
 
   .socials a:hover i {
     color: #BEB37F;
-
   }
 
   .footer-bottom {
@@ -447,7 +438,6 @@
 
   .footer-menu {
     float: right;
-
   }
 
   .footer-menu ul {
@@ -457,7 +447,6 @@
   .footer-menu ul li {
     padding-right: 13px;
     display: block;
-
   }
 
   .footer-menu ul li a {
@@ -477,10 +466,6 @@
     }
   }
 
-
-
-
-
   @media (max-width: 980px) {
     .position {
       margin-left: 10px;
@@ -493,7 +478,6 @@
   }
 
   @media (max-width: 600px) {
-
     .firstDiv {
       display: none;
     }
@@ -510,7 +494,6 @@
     .secondNav {
       display: flex;
       align-items: center;
-
       cursor: pointer;
     }
 
@@ -524,50 +507,10 @@
       width: 90%;
       align-self: center;
     }
-
-
-  }
-
-
-
-  body {
-    overflow-x: hidden;
-    box-sizing: border-box;
-
-  }
-
-  .gallery-container {
-    width: 80%;
-    margin: 100px auto;
-    box-sizing: border-box;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 300px);
-  }
-
-  .gallery-container .gallery-card {
-    overflow: hidden;
-    box-sizing: border-box;
-    padding: 10px;
-  }
-
-  .gallery-container .gallery-card a {
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-
-  }
-
-  .gallery-container .gallery-card a>img {
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-
   }
 
   .logo:hover {
     cursor: pointer;
-
   }
 
   .divCarousel {
@@ -582,16 +525,11 @@
     border-collapse: collapse;
   }
 
-  /*
-  */
-
-
   .row {
     height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
-
   }
 
   .column {
@@ -616,8 +554,6 @@
 
   .galleryMadrid {
     height: 1100px;
-
-
   }
 
   .centerText {
@@ -662,12 +598,81 @@
     padding: 0;
   }
 
-  .divPageTittleContainer{
+  .divPageTittleContainer {
     margin-top: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
+
+  .sectionMaps {
+    height: 600px;
+    background-color: rgba(40, 40, 43, 255);
+    display: flex;
+    flex-direction: row;
+  }
+
+  iframe {
+    margin: 100px;
+    margin-left: 125px;
+    border-radius: 4px;
+  }
+
+  .divMap {
+    width: 50%;
+  }
+
+  .locationText {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+  }
+
+  .locationText h3 {
+    font-size: 35px;
+    align-self: center;
+  }
+
+  .locationText p {
+    justify-content: center;
+    color: white;
+    font-weight: 325;
+    text-align: center;
+    align-self: center;
+    max-width: 75%;
+    margin-top: 10px;
+
+  }
+
+  .btn {
+    background-color: rgba(40, 40, 43, 255);
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+    color: #FFFFFF;
+    padding: 8px 18px;
+    text-decoration: none;
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: bold;
+    border: 1.5px solid #ffffff;
+    width: 120px;
+    margin-top: 10px;
+    align-self: center;
+  }
+
+  .btn:hover {
+    background-color: white;
+    color: black;
+  }
+
+  hr{
+    width: 40%; 
+    align-self: center;
+    margin-left: 30%;
+  }
+
 </style>
 
 
@@ -727,6 +732,8 @@
     </div>
   </div>
 
+  <hr>
+
   <div class="marcoContainer">
     <div class="marco" id="visor">
     </div>
@@ -759,17 +766,30 @@
     </div>
   </div>
 
+  <div class="sectionMaps">
+    <div class="divMap">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7990.442721045056!2d-3.828425700026129!3d40.440548387156866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd418678091e37e9%3A0x6ab4867c4b62809d!2sC.%20Rafael%20Mart%C3%ADn%2C%207%2C%2028223%20Pozuelo%20de%20Alarc%C3%B3n%2C%20Madrid!5e0!3m2!1ses!2ses!4v1654399210621!5m2!1ses!2ses"
+        width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="locationText">
+
+      <h3>Ven a visitarnos</h3>
+      <p>Nuestro equipo esta disponible en cualquier momento para atenderle.
+        Rellene el formulario y en breve se comunicaran con usted para concretar la cita.</p>
+      <input type="button" class="btn" value="Contactanos!" onclick="location.href='visita.html'">
+
+
+    </div>
+
+  </div>
+
   <section>
     <img onclick="_scrollTop()" class="arrow-up"
       src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2017/png/iconmonstr-arrow-70.png&r=255&g=255&b=255"
       alt="">
   </section>
-
-
-
-
-
-
 
 
 </body>

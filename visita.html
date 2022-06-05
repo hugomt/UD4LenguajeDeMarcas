@@ -281,7 +281,7 @@
         height: 40px;
         position: fixed;
         right: 20px;
-        bottom: 20px;
+        bottom: 10px;
         cursor: pointer;
         background: none;
         border: none;
@@ -305,7 +305,8 @@
     .littleContainer {
         align-items: center;
         display: flex;
-        height: 150px;
+        margin-top: 30px;
+        margin-bottom: 15px;
         justify-content: center;
     }
 
@@ -472,7 +473,6 @@
     .divForm ul li input[type="button"],
     .divForm ul li input[type="submit"] {
         background-color: rgba(40, 40, 43, 255);
-        border: none;
         display: inline-block;
         cursor: pointer;
         color: #FFFFFF;
@@ -481,6 +481,11 @@
         font-family: "Playfair Display", Georgia, serif;
         font-weight: bold;
         border: 1.5px solid #ffffff;
+
+    }
+
+    .divForm ul li input[type="button"] {
+        border-radius: 3px;
     }
 
     .divForm ul li input[type="button"]:hover,
@@ -637,6 +642,17 @@
             margin-bottom: 20px;
         }
     }
+
+    hr {
+        width: 40%;
+        align-self: center;
+        margin-left: 30%;
+        height: 1px;
+        margin-bottom: 30px;
+        background-color: white;
+        border-width: 0px;
+        
+    }
 </style>
 
 
@@ -698,6 +714,8 @@
 
     </div>
 
+    <hr>
+
     <img onclick="_scrollTop()" class="arrow-up"
         src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2017/png/iconmonstr-arrow-70.png&r=255&g=255&b=255"
         alt="">
@@ -736,8 +754,6 @@
     </div>
 
     <div class="containers">
-
-
     </div>
 
 
