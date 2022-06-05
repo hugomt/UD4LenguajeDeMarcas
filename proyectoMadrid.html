@@ -19,7 +19,6 @@
   body {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2)), url(https://firebasestorage.googleapis.com/v0/b/imagenes-web-258e1.appspot.com/o/fondoBorroso.jpeg?alt=media&token=844249c5-9c85-4f43-839e-872a94293362);
     background-position: center center;
-    
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -526,7 +525,7 @@
       align-self: center;
     }
 
-    
+
   }
 
 
@@ -587,47 +586,64 @@
   */
 
 
-.row{
- height: 300px;
- display:flex;
- align-items: center;
+  .row {
+    height: 300px;
+    display: flex;
+    align-items: center;
     justify-content: center;
- 
-}
 
-.column{
-display:flex;
-background-color: white;
-height: 260px;
-width: 260px;
-margin: 10px;
-}
+  }
 
-.column:hover{
-  cursor: pointer;
-  transform: scale(1.02);
-}
+  .column {
+    display: flex;
+    background-color: white;
+    height: 260px;
+    width: 260px;
+    margin: 10px;
+  }
 
-.column img{
-height: 100%;
-width: 100%;
-object-fit: cover;
-object-position: center center;
-}
+  .column:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+  }
 
-.galleryMadrid{
-  height: 1100px;
- 
- 
-}
+  .column img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
 
-.centerText{
-  margin-right: 665px;
-}
+  .galleryMadrid {
+    height: 1100px;
 
-h1{
-  color: white;
-}
+
+  }
+
+  .centerText {
+    margin-right: 665px;
+  }
+
+  h1 {
+    color: white;
+  }
+
+  .marco {
+    background: url(images/madrid9.jpg);
+    align-self: center;
+    width: 60%;
+    height: 500px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .marcoContainer {
+    margin-top: 120px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 </style>
 
 
@@ -681,32 +697,37 @@ h1{
   </header>
   </div>
 
+  <div class="marcoContainer">
+    <div class="marco" id="visor">
+    </div>
+  </div>
+
   <div class="containers">
-    <h1 class="centerText" >Descubre nuestro proyecto</h1>
+    <h1 class="centerText">Descubre nuestro proyecto</h1>
   </div>
 
-<div class="galleryMadrid">
-  <div class="row">
-    <div class="column" onclick="location.href='images/madrid2.jpg'"><img src="images/madrid2.jpg"></div>
-    <div class="column" onclick="location.href='images/madrid9.jpg'"><img src="images/madrid9.jpg"></div>
-    <div class="column" onclick="location.href='images/madrid10.jpg'"><img src="images/madrid10.jpg"></div>
-    <div class="column" onclick="location.href='images/madrid4.jpg'"><img src="images/madrid4.jpg"></div>
-  </div>
-  
-  <div class="row">
-    <div class="column" onclick="location.href='images/madrid8.jpg'"><img src="images/madrid8.jpg"></div>
-    <div class="column" onclick="location.href='images/madrid5.jpg'"><img src="images/madrid5.jpg"></div>
-    <div class="column" onclick="location.href='images/madrid6.jpg'"><img src="images/madrid6.jpg"></div>
-    <div class="column" onclick="location.href='images/madrid7.jpg'"><img src="images/madrid7.jpg"></div>
-  </div>
+  <div class="galleryMadrid">
+    <div class="row">
+      <div class="column" onclick="madrid2()"><img src="images/madrid2.jpg"></div>
+      <div class="column" onclick="madrid9()"><img src="images/madrid9.jpg"></div>
+      <div class="column" onclick="madrid10()"><img src="images/madrid10.jpg"></div>
+      <div class="column" onclick="madrid4()"><img src="images/madrid4.jpg"></div>
+    </div>
 
-  <div class="row">
-    <div class="column" onclick="location.href='images/madrid3.jpg'"><img src="images/madrid3.jpg"></div>
-    <div class="column" onclick="location.href='images/madrid11.jpg'"><img src="images/madrid11.jpg"></div>
-    <div class="column" onclick="location.href='images/madrid12.jpg'"><img src="images/madrid12.jpg"></div>
-    <div class="column" onclick="location.href='images/madrid1.jpg'"><img src="images/madrid1.jpg"></div>
+    <div class="row">
+      <div class="column" onclick="madrid8()"><img src="images/madrid8.jpg"></div>
+      <div class="column" onclick="madrid5()"><img src="images/madrid5.jpg"></div>
+      <div class="column" onclick="madrid6()"><img src="images/madrid6.jpg"></div>
+      <div class="column" onclick="madrid7()"><img src="images/madrid7.jpg"></div>
+    </div>
+
+    <div class="row">
+      <div class="column" onclick="madrid3()"><img src="images/madrid3.jpg"></div>
+      <div class="column" onclick="madrid11()"><img src="images/madrid11.jpg"></div>
+      <div class="column" onclick="madrid12()"><img src="images/madrid12.jpg"></div>
+      <div class="column" onclick="madrid1()"><img src="images/madrid1.jpg"></div>
+    </div>
   </div>
-</div>
 
   <section>
     <img onclick="_scrollTop()" class="arrow-up"
@@ -753,9 +774,101 @@ h1{
 
 
 <script>
+  function madrid1() {
+    document.getElementById('visor').style.backgroundImage = "url(images/madrid1.jpg)";
+    window.scroll({
+      top: 120,
+      behavior: 'smooth'
+    });
+  }
 
+  function madrid2() {
+    document.getElementById('visor').style.backgroundImage = "url(images/madrid2.jpg)";
+    window.scroll({
+      top: 120,
+      behavior: 'smooth'
+    });
+  }
 
+  function madrid3() {
+    document.getElementById('visor').style.backgroundImage = "url(images/madrid3.jpg)";
+    window.scroll({
+      top: 120,
+      behavior: 'smooth'
+    });
+  }
 
+  function madrid4() {
+    document.getElementById('visor').style.backgroundImage = "url(images/madrid4.jpg)";
+    window.scroll({
+      top: 120,
+      behavior: 'smooth'
+    });
+  }
+
+  function madrid5() {
+    document.getElementById('visor').style.backgroundImage = "url(images/madrid5.jpg)";
+    window.scroll({
+      top: 120,
+      behavior: 'smooth'
+    });
+  }
+
+  function madrid6() {
+    document.getElementById('visor').style.backgroundImage = "url(images/madrid6.jpg)";
+    window.scroll({
+      top: 120,
+      behavior: 'smooth'
+    });
+  }
+
+  function madrid7() {
+    document.getElementById('visor').style.backgroundImage = "url(images/madrid7.jpg)";
+    window.scroll({
+      top: 120,
+      behavior: 'smooth'
+    });
+  }
+
+  function madrid8() {
+    document.getElementById('visor').style.backgroundImage = "url(images/madrid8.jpg)";
+    window.scroll({
+      top: 120,
+      behavior: 'smooth'
+    });
+  }
+
+  function madrid9() {
+    document.getElementById('visor').style.backgroundImage = "url(images/madrid9.jpg)";
+    window.scroll({
+      top: 120,
+      behavior: 'smooth'
+    });
+  }
+
+  function madrid10() {
+    document.getElementById('visor').style.backgroundImage = "url(images/madrid10.jpg)";
+    window.scroll({
+      top: 120,
+      behavior: 'smooth'
+    });
+  }
+
+  function madrid11() {
+    document.getElementById('visor').style.backgroundImage = "url(images/madrid11.jpg)";
+    window.scroll({
+      top: 120,
+      behavior: 'smooth'
+    });
+  }
+
+  function madrid12() {
+    document.getElementById('visor').style.backgroundImage = "url(images/madrid12.jpg)";
+    window.scroll({
+      top: 120,
+      behavior: 'smooth'
+    });
+  }
 
 
   function openSidebar() {
