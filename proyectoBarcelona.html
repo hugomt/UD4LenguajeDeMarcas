@@ -5,694 +5,11 @@
   <link rel="stylesheet" href="css\styles.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="js\app.js"></script>
+  <link rel="stylesheet" href="css\proyectoBarcelona.css">
 </head>
 
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
-
-  * {
-    font-family: "Fira Sans", Helvetica, Arial, sans-serif;
-    margin: 0;
-  }
-
-  body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2)), url(https://firebasestorage.googleapis.com/v0/b/imagenes-web-258e1.appspot.com/o/fondoBorroso.jpeg?alt=media&token=844249c5-9c85-4f43-839e-872a94293362);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-  }
-
-  .firstDiv {
-    background-color: rgba(40, 40, 43, 255);
-    display: flex;
-    height: 100px;
-    justify-content: space-between;
-  }
-
-  button {
-    color: white;
-    border: none;
-    background-color: transparent;
-    font-weight: bold;
-    padding: 0;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-
-  .joinButton {
-    margin-left: 40px;
-    font-weight: 400;
-  }
-
-  .contactButton {
-    margin-left: 40px;
-    font-weight: 400;
-  }
-
-  .clientButton {
-    margin-right: 40px;
-    font-weight: 400;
-  }
-
-  button:hover {
-    border-bottom: 2px solid white;
-    border-collapse: collapse;
-    height: auto;
-    cursor: pointer;
-  }
-
-  header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding-right: 40px;
-    padding-left: 40px;
-    padding-top: 10px;
-    padding-bottom: 20px;
-  }
-
-  .secondsButtons {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-top: 7px;
-    margin-left: 80px;
-    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
-    font-size: 14px;
-    color: white;
-    padding-top: 20px;
-
-  }
-
-  h1 {
-    font-family: "Playfair Display", Georgia, serif;
-    color: white;
-
-  }
-
-  nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .arrow {
-    margin-left: 10px;
-    height: 15px;
-    width: 15px;
-    padding: 0;
-    filter: brightness(200%);
-  }
-
-
-  .secondsButtons:hover {
-    border-bottom: 3px solid grey;
-    border-collapse: collapse;
-  }
-
-  section {
-    display: flex;
-    flex-direction: column;
-    margin-top: 112px;
-    margin-left: 215px;
-    position: relative;
-  }
-
-  .secondLine {
-    margin-left: 20px;
-    margin-right: 20px;
-    border: 1px solid rgba(173, 174, 179);
-    background-color: rgba(173, 174, 179);
-    border-collapse: collapse;
-  }
-
-  .position {
-    display: flex;
-    flex-direction: column;
-    width: 80px;
-    margin-top: 150px;
-    margin-left: 140px;
-    position: absolute;
-  }
-
-  .title {
-    font-size: 50px;
-    width: 450px;
-    font-family: "Playfair Display", Georgia, serif;
-    font-weight: 200;
-    margin-bottom: 20px;
-  }
-
-  .txtdescription {
-    font-family: "Fira Sans", Helvetica, Arial, sans-serif;
-    color: white;
-    width: 420px;
-    font-weight: 250;
-    line-height: 27px;
-  }
-
-  .txtdesign {
-    font-family: "Fira Sans", Helvetica, Arial, sans-serif;
-    color: white;
-    font-weight: 250;
-    line-height: 27px;
-  }
-
-  h2 {
-    border-bottom: 1px solid #918750;
-    border-collapse: collapse;
-    font-weight: 600;
-    font-size: 10px;
-    color: white;
-  }
-
-  .rightArrow {
-    height: 10px;
-    width: 20px;
-    margin-left: 10px;
-    filter: brightness(180%);
-  }
-
-  .lastDiv {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 150px;
-    margin-top: 20px;
-    cursor: pointer;
-  }
-
-  .secondNav {
-    display: none;
-  }
-
-  .menuImage {
-    width: 30px;
-    height: 30px;
-    margin-left: 210px;
-    margin-top: 5px;
-  }
-
-
-
-  h3 {
-    color: white;
-    font-family: "Playfair Display", Georgia, serif;
-    font-size: 2.1rem;
-    font-weight: 400;
-  }
-
-  .sidebar {
-    background-color: rgba(40, 40, 43, 255);
-    position: absolute;
-    z-index: 999;
-    padding: 20px;
-    display: flex;
-    top: 0;
-    width: 30%;
-    height: 34%;
-    left: 100%;
-    transition: .5s left;
-    border-bottom: 2px solid grey;
-    border-left: 2px solid grey;
-    flex-direction: column;
-  }
-
-  .sidebar.open {
-    left: 70%;
-  }
-
-  .closeImage {
-    height: 20px;
-    width: 20px;
-    cursor: pointer;
-    margin-left: 1px;
-    margin-top: 1px;
-
-  }
-
-  .divCloseImage {
-    height: 30px;
-    width: 1000px;
-    margin-bottom: 5px;
-    display: flex;
-
-  }
-
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    width: 200px;
-    margin-top: 95px;
-    margin-left: 189px;
-  }
-
-  .dropdown-content.open {
-    display: block;
-  }
-
-  .dropdownMenu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    background-color: rgba(40, 40, 43, 255);
-    position: absolute;
-    left: 0;
-    z-index: 1000;
-    float: left;
-    min-width: 160px;
-    padding: 5px 0;
-    font-size: 14px;
-    text-align: left;
-    list-style: none;
-    background-clip: padding-box;
-    height: 87px;
-    margin-left: 23px;
-
-  }
-
-  .dropdownMenu li {
-    padding: 10px;
-    border-bottom: 2px solid #80808024;
-    color: white;
-  }
-
-  .dropdownMenu li:hover {
-    background-color: rgba(111, 126, 143, 255);
-    cursor: pointer;
-    color: white;
-  }
-
-  .dropdownMenu li:last-child {
-    border-bottom: none;
-  }
-
-  .arrow-up {
-    width: 40px;
-    height: 40px;
-    position: fixed;
-    right: 20px;
-    bottom: 10px;
-    cursor: pointer;
-    background: none;
-    border: none;
-    padding: 0px;
-    opacity: 0;
-    transition: .4s opacity;
-  }
-
-  .arrow-up.visible {
-    opacity: 1;
-  }
-
-  .containers {
-    height: 150px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    margin-top: 70px;
-  }
-
-  .divMenu {
-    display: flex;
-    align-self: left;
-  }
-
-  .vistaProyecto {
-    background-color: rgba(40, 40, 43, 255);
-    width: 100%;
-    height: 2000px;
-    margin-top: 50px;
-    display: flex;
-    align-content: center;
-    flex-direction: column;
-  }
-
-  .titleDesign {
-    align-self: center;
-    margin-top: 100px;
-  }
-
-  .prgphDesign {
-    margin-top: 40px;
-    display: flex;
-    align-self: center;
-    width: 65%;
-    height: 50%;
-    font-size: 19px;
-    text-align: justify
-  }
-
-  footer {
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(40, 40, 43, 255);
-    height: auto;
-    width: 100vw;
-    padding-top: 40px;
-    color: #fff;
-  }
-
-  .footer-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .footer-content h3 {
-    font-size: 30px;
-    font-weight: 500;
-    text-transform: capitalize;
-    line-height: 3rem;
-  }
-
-  .footer-content p {
-    max-width: 500px;
-    margin: 10px auto;
-    line-height: 28px;
-    font-size: 14px;
-    color: #cacdd2;
-  }
-
-  .socials {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 1rem 0 3rem 0;
-  }
-
-  .socials li {
-    margin: 0 10px;
-  }
-
-  .socials a {
-    text-decoration: none;
-    color: #fff;
-    border: 1.1px solid white;
-    padding: 5px;
-    border-radius: 50%;
-  }
-
-  .socials a i {
-    font-size: 1.1rem;
-    width: 20px;
-    transition: color .4s ease;
-
-  }
-
-  .socials a:hover i {
-    color: rgba(111, 126, 143, 255);
-  }
-
-  .footer-bottom {
-    background: #111;
-    width: 100vw;
-    padding: 20px;
-    padding-bottom: 40px;
-    text-align: center;
-  }
-
-  .footer-bottom p {
-    float: left;
-    font-size: 14px;
-    word-spacing: 2px;
-    text-transform: capitalize;
-  }
-
-  .footer-bottom p a {
-    color: white;
-    font-size: 16px;
-    text-decoration: none;
-  }
-
-  .footer-bottom span {
-    text-transform: uppercase;
-    opacity: .4;
-    font-weight: 200;
-  }
-
-  .footer-menu {
-    float: right;
-  }
-
-  .footer-menu ul {
-    display: flex;
-  }
-
-  .footer-menu ul li {
-    padding-right: 13px;
-    display: block;
-  }
-
-  .footer-menu ul li a {
-    color: #cfd2d6;
-    text-decoration: none;
-  }
-
-  .footer-menu ul li a:hover {
-    color: rgba(111, 126, 143, 255);
-  }
-
-  @media (max-width:500px) {
-    .footer-menu ul {
-      display: flex;
-      margin-top: 10px;
-      margin-bottom: 20px;
-    }
-  }
-
-  @media (max-width: 980px) {
-    .position {
-      margin-left: 10px;
-    }
-
-    section {
-      margin-left: 80px;
-      margin-top: 80px;
-    }
-  }
-
-  @media (max-width: 600px) {
-
-
-    .firstDiv {
-      display: none;
-    }
-
-    .h1 {
-      margin-left: 10px;
-      display: flex;
-    }
-
-    nav {
-      display: none;
-    }
-
-    .secondNav {
-      display: flex;
-      align-items: center;
-      cursor: pointer;
-    }
-
-    section {
-      margin-left: 50px;
-    }
-
-    .divCarousel {
-      margin-bottom: 40px;
-      height: 90%;
-      width: 90%;
-      align-self: center;
-    }
-
-  
-
-}
-
-
-  
-
-  .logo:hover {
-    cursor: pointer;
-  }
-
-  .divCarousel {
-    margin-bottom: 40px;
-    height: 60%;
-    width: 60%;
-    align-self: center;
-  }
-
-  .thisPage {
-    border-bottom: 3px solid grey;
-    border-collapse: collapse;
-  }
-
-  .row {
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .column {
-    display: flex;
-    background-color: white;
-    height: 260px;
-    width: 260px;
-    margin: 10px;
-  }
-
-  .column:hover {
-    cursor: pointer;
-    transform: scale(1.02);
-  }
-
-  .column img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position: center center;
-  }
-
-  .galleryMadrid {
-    height: 1100px;
-  }
-
-  .centerText {
-    margin-right: 665px;
-  }
-
-  h1 {
-    color: white;
-  }
-
-  .marco {
-    background: url(https://firebasestorage.googleapis.com/v0/b/imagenes-web-258e1.appspot.com/o/barcelona5.jpg?alt=media&token=81fccbd6-80f1-4358-9854-d8749ddb1c87);
-    align-self: center;
-    width: 60%;
-    height: 500px;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  .marcoContainer {
-    margin-top: 60px;
-    margin-bottom: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .divPageTittle {
-    height: 50px;
-    width: 500px;
-    margin-top: 10PX;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 3px;
-  }
-
-  .pageTittle {
-    color: white;
-    margin: 0;
-    padding: 0;
-  }
-
-  .divPageTittleContainer {
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .sectionMaps {
-    height: 600px;
-    background-color: rgba(40, 40, 43, 255);
-    display: flex;
-    flex-direction: row;
-  }
-
-  iframe {
-    margin: 100px;
-    margin-left: 125px;
-    border-radius: 4px;
-  }
-
-  .divMap {
-    width: 50%;
-  }
-
-  .locationText {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-
-  }
-
-  .locationText h3 {
-    font-size: 35px;
-    align-self: center;
-  }
-
-  .locationText p {
-    justify-content: center;
-    color: white;
-    font-weight: 325;
-    text-align: center;
-    align-self: center;
-    max-width: 75%;
-    margin-top: 10px;
-
-  }
-
-  .marginBellow{
-    margin-bottom: 80px;
-  }
-
-  .btn {
-    background-color: rgba(40, 40, 43, 255);
-    border: none;
-    display: inline-block;
-    cursor: pointer;
-    color: #FFFFFF;
-    padding: 8px 18px;
-    text-decoration: none;
-    font-family: "Playfair Display", Georgia, serif;
-    font-weight: bold;
-    border: 1.5px solid #ffffff;
-    width: 120px;
-    margin-top: 10px;
-    align-self: center;
-  }
-
-  .btn:hover {
-    background-color: white;
-    color: black;
-  }
-
-  hr{
-    width: 40%; 
-    align-self: center;
-    margin-left: 30%;
-  }
-
-</style>
-
-
-
 <body>
-
   <header class="firstDiv fixed-top">
     <h1 class="logo" onclick="location.href='index.html'">Modern State</h1>
     <nav>
@@ -701,8 +18,7 @@
           onclick="openDropdown()"
           src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2017/png/iconmonstr-arrow-65.png&r=156&g=156&b=156">
       </button>
-      <button class="secondsButtons" onclick="location.href='visita.html'">CONTACTO</button>
-
+      <button class="secondsButtons" onclick="location.href='contacto.html'">CONTACTO</button>
       <div class="dropdown-content">
         <ul class="dropdownMenu">
           <li onclick="location.href='proyectoMadrid.html'">Proyecto Madrid</li>
@@ -712,51 +28,41 @@
     </nav>
   </header>
 
-
   <div class="secondNav firstDiv fixed-top">
     <header>
       <h1 onclick="location.href='index.html'">Modern State</h1>
-
-
       <img class="menuImage"
-        src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2013/png/iconmonstr-menu-1.png&r=135&g=135&b=135"
-        onclick="openSidebar()">
+        src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2013/png/iconmonstr-menu-1.png&r=135&g=135&b=135" onclick="openSidebar()">
   </div>
   <div class="sidebar">
     <div class="divCloseImage">
       <img class="closeImage"
-        src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2017/png/iconmonstr-x-mark-11.png&r=173&g=173&b=173"
-        onclick="closeSidebar()">
+        src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2017/png/iconmonstr-x-mark-11.png&r=173&g=173&b=173" onclick="closeSidebar()">
     </div>
     <div class="divMenu">
       <ul class="dropdownMenu">
         <li onclick="location.href='index.html'">Inicio</li>
         <li onclick="location.href='proyectoMadrid.html'">Proyecto Madrid</li>
         <li onclick="location.href='proyectoBarcelona.html'">Proyecto Barcelona</li>
-        <li onclick="location.href='visita.html'">Visitanos</li>
+        <li onclick="location.href='contacto.html'">Visitanos</li>
       </ul>
     </div>
   </div>
   </header>
   </div>
-
   <div class="divPageTittleContainer">
     <div class="divPageTittle">
       <h1 class="pageTittle">Construcción en Barcelona</h1>
     </div>
   </div>
-
   <hr>
-
   <div class="marcoContainer">
     <div class="marco" id="visor">
     </div>
   </div>
-
   <div class="containers">
     <h1 class="centerText">Descubre nuestro proyecto</h1>
   </div>
-
   <div class="galleryBarcelona">
     <div class="row">
       <div class="column" onclick="barcelona1()"><img src="https://firebasestorage.googleapis.com/v0/b/imagenes-web-258e1.appspot.com/o/barcelona1.jpg?alt=media&token=62592f73-634a-4b3c-842d-404f96a7642d"></div>
@@ -772,38 +78,29 @@
       <div class="column" onclick="barcelona12()"><img src="https://firebasestorage.googleapis.com/v0/b/imagenes-web-258e1.appspot.com/o/barcelona12.jpg?alt=media&token=2cf3a079-11a4-46de-9f6d-229043433190"></div>
     </div>
 
-    <div class="row marginBellow">
+    <div class="row padding">
       <div class="column" onclick="barcelona5()"><img src="https://firebasestorage.googleapis.com/v0/b/imagenes-web-258e1.appspot.com/o/barcelona5.jpg?alt=media&token=81fccbd6-80f1-4358-9854-d8749ddb1c87"></div>
       <div class="column" onclick="barcelona6()"><img src="https://firebasestorage.googleapis.com/v0/b/imagenes-web-258e1.appspot.com/o/barcelona6.jpg?alt=media&token=db576488-02c7-4e2e-9313-0ab146b2e837"></div>
       <div class="column" onclick="barcelona7()"><img src="https://firebasestorage.googleapis.com/v0/b/imagenes-web-258e1.appspot.com/o/barcelona7.jpg?alt=media&token=978b294e-305d-45d0-b402-96886672ab78"></div>
       <div class="column" onclick="barcelona8()"><img src="https://firebasestorage.googleapis.com/v0/b/imagenes-web-258e1.appspot.com/o/barcelona8.jpg?alt=media&token=2313e630-1ad2-4a67-9e72-4ecbdb58bd1b"></div>
     </div>
-
   </div>
-
   <div class="sectionMaps">
     <div class="divMap">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13973.500418234296!2d2.105658455034829!3d41.35941595303832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a498dda4e9fb67%3A0x21e0dca09d2b7064!2sC.%20Cobalto%2C%2032%2C%2008907%20L&#39;Hospitalet%20de%20Llobregat%2C%20Barcelona!5e0!3m2!1ses!2ses!4v1654512037692!5m2!1ses!2ses" width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <div class="locationText">
-
       <h3>Ven a visitarnos</h3>
       <p>Nuestro equipo esta disponible en cualquier momento para atenderle.
         Rellene el formulario y en breve se comunicaran con usted para concretar la cita.</p>
       <input type="button" class="btn" value="Contactanos!" onclick="location.href='visita.html'">
-
-
     </div>
-
   </div>
-
   <section>
     <img onclick="_scrollTop()" class="arrow-up"
       src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2017/png/iconmonstr-arrow-70.png&r=255&g=255&b=255"
       alt="">
   </section>
-
-
 </body>
 
 <footer>
@@ -826,155 +123,10 @@
         <li><a href="index.html">Inicio</a></li>
         <li><a href="proyectoMadrid.html">Proyecto Madrid</a></li>
         <li><a href="proyectoBarcelona.html">Proyecto Barcelona</a></li>
-        <li style="margin-right: 60px"><a href="visita.html">Organiza tu visita</a></li>
+        <li style="margin-right: 60px"><a href="contacto.html">Organiza tu visita</a></li>
       </ul>
     </div>
   </div>
-
 </footer>
-
-
-
-<script>
-  function barcelona1() {
-    document.getElementById('visor').style.backgroundImage = "url(https://firebasestorage.googleapis.com/v0/b/imagenes-web-258e1.appspot.com/o/barcelona1.jpg?alt=media&token=62592f73-634a-4b3c-842d-404f96a7642d)";
-    window.scroll({
-      top: 123,
-      behavior: 'smooth'
-    });
-  }
-
-  function barcelona2() {
-    document.getElementById('visor').style.backgroundImage = "url(https://firebasestorage.googleapis.com/v0/b/imagenes-web-258e1.appspot.com/o/barcelona2.jpg?alt=media&token=b6623417-574d-426e-9800-59518f6b2a58)";
-    window.scroll({
-      top: 123,
-      behavior: 'smooth'
-    });
-  }
-
-  function barcelona3() {
-    document.getElementById('visor').style.backgroundImage = "url(https://firebasestorage.googleapis.com/v0/b/imagenes-web-258e1.appspot.com/o/barcelona3.jpg?alt=media&token=af31e75b-2854-4a06-9258-1ba5f5508bb0)";
-    window.scroll({
-      top: 123,
-      behavior: 'smooth'
-    });
-  }
-
-  function barcelona4() {
-    document.getElementById('visor').style.backgroundImage = "url(https://firebasestorage.googleapis.com/v0/b/imagenes-web-258e1.appspot.com/o/barcelona4.jpg?alt=media&token=ff906a9b-0a9c-496e-89cc-3ed04968632c)";
-    window.scroll({
-      top: 123,
-      behavior: 'smooth'
-    });
-  }
-
-  function barcelona5() {
-    document.getElementById('visor').style.backgroundImage = "url(https://firebasestorage.googleapis.com/v0/b/imagenes-web-258e1.appspot.com/o/barcelona5.jpg?alt=media&token=81fccbd6-80f1-4358-9854-d8749ddb1c87)";
-    window.scroll({
-      top: 123,
-      behavior: 'smooth'
-    });
-  }
-
-  function barcelona6() {
-    document.getElementById('visor').style.backgroundImage = "url(https://firebasestorage.googleapis.com/v0/b/imagenes-web-258e1.appspot.com/o/barcelona6.jpg?alt=media&token=db576488-02c7-4e2e-9313-0ab146b2e837)";
-    window.scroll({
-      top: 123,
-      behavior: 'smooth'
-    });
-  }
-
-  function barcelona7() {
-    document.getElementById('visor').style.backgroundImage = "url(https://firebasestorage.googleapis.com/v0/b/imagenes-web-258e1.appspot.com/o/barcelona7.jpg?alt=media&token=978b294e-305d-45d0-b402-96886672ab78)";
-    window.scroll({
-      top: 123,
-      behavior: 'smooth'
-    });
-  }
-
-  function barcelona8() {
-    document.getElementById('visor').style.backgroundImage = "url(https://firebasestorage.googleapis.com/v0/b/imagenes-web-258e1.appspot.com/o/barcelona8.jpg?alt=media&token=2313e630-1ad2-4a67-9e72-4ecbdb58bd1b)";
-    window.scroll({
-      top: 123,
-      behavior: 'smooth'
-    });
-  }
-  
-  function barcelona9() {
-    document.getElementById('visor').style.backgroundImage = "url(https://firebasestorage.googleapis.com/v0/b/imagenes-web-258e1.appspot.com/o/barcelona9.jpg?alt=media&token=e20b22f8-08e5-4efe-9a78-6bc2ed09f364)";
-    window.scroll({
-      top: 123,
-      behavior: 'smooth'
-    });
-  }
-
-  function barcelona10() {
-    document.getElementById('visor').style.backgroundImage = "url(https://firebasestorage.googleapis.com/v0/b/imagenes-web-258e1.appspot.com/o/barcelona10.jpg?alt=media&token=e9845f34-07a4-4a5a-8045-4ce6b83a6be6)";
-    window.scroll({
-      top: 123,
-      behavior: 'smooth'
-    });
-  }
-
-  function barcelona11() {
-    document.getElementById('visor').style.backgroundImage = "url(https://firebasestorage.googleapis.com/v0/b/imagenes-web-258e1.appspot.com/o/barcelona11.jpg?alt=media&token=dbff4c90-ba2a-4e1d-8bb4-7fa852ea4853)";
-    window.scroll({
-      top: 123,
-      behavior: 'smooth'
-    });
-  }
-
-  function barcelona12() {
-    document.getElementById('visor').style.backgroundImage = "url(https://firebasestorage.googleapis.com/v0/b/imagenes-web-258e1.appspot.com/o/barcelona12.jpg?alt=media&token=2cf3a079-11a4-46de-9f6d-229043433190)";
-    window.scroll({
-      top: 123,
-      behavior: 'smooth'
-    });
-  }
-
-
-
-
-  function openSidebar() {
-    console.log('sidebar');
-    document.querySelector('.sidebar').classList.add('open');
-  }
-
-  function closeSidebar() {
-    console.log('sidebar');
-    document.querySelector('.sidebar').classList.remove('open');
-  }
-
-  function openDropdown() {
-    var dropdownContent = document.querySelector('.dropdown-content');
-    var svgIcon = document.querySelector('.my-svg');
-
-    var isOpen = dropdownContent.classList.contains('open');
-
-    if (isOpen) {
-      dropdownContent.classList.remove('open');
-      svgIcon.classList.remove('open');
-    } else {
-      dropdownContent.classList.add('open');
-      svgIcon.classList.add('open');
-    }
-  }
-
-  window.addEventListener('scroll', function (e) {
-    const arrow = document.querySelector('.arrow-up');
-    if (window.scrollY > 100) {
-      arrow.classList.add('visible');
-    } else {
-      arrow.classList.remove('visible');
-    }
-  });
-
-  function _scrollTop() {
-    window.scroll({
-      top: 0,
-      behavior: 'smooth'
-    });
-  }
-</script>
 
 </html>
