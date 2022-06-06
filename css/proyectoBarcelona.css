@@ -460,7 +460,7 @@ footer {
   .centerText {
     align-self: center;
     display: flex;
-   }
+  }
 }
 
 @media (max-width: 980px) {
@@ -474,14 +474,13 @@ footer {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-}
+  }
 
-.galleryMadrid {
+  .galleryMadrid {
     height: 2500px;
-}
+  }
 
-.divRow
-  section {
+  .divRow section {
     margin-left: 80px;
     margin-top: 80px;
   }
@@ -491,16 +490,15 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+  }
 
-.divMap {
+  .divMap {
     width: 50%;
     display: contents;
-}
+  }
 }
 
 @media (max-width: 600px) {
-
 
   .firstDiv {
     display: none;
@@ -532,11 +530,7 @@ footer {
     align-self: center;
   }
 
-
-
 }
-
-
 
 
 .logo:hover {
@@ -584,9 +578,9 @@ footer {
 
 
 
-    .centerText {
-        margin-right: 44%;
-    }
+.centerText {
+  margin-right: 44%;
+}
 
 
 h1 {
@@ -697,18 +691,18 @@ iframe {
   color: black;
 }
 
-hr{
-  width: 40%; 
+hr {
+  width: 40%;
   align-self: center;
   margin-left: 30%;
 }
 
-.padding{
-    margin-bottom: 40px;
+.padding {
+  margin-bottom: 40px;
 }
 
 @media (max-width: 600px) {
-    .marco {
-        width: 90%;
-    }
+  .marco {
+    width: 90%;
+  }
 }

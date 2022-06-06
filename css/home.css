@@ -308,7 +308,7 @@ h3 {
 .vistaProyecto {
   background-color: rgba(40, 40, 43, 255);
   width: 100%;
-  height: 1350px;
+  height: 1230px;
   margin-top: 50px;
   display: flex;
   align-content: center;
@@ -525,10 +525,7 @@ footer {
     margin-top: 80px;
   }
 
-  .vistaProyecto {
-    height: 1100px;
-  }
-
+ 
   .menuImage {
     margin-left: 100px;
   }
