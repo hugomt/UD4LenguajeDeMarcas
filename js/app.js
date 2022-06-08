@@ -38,42 +38,6 @@ function openSidebar() {
     });
   }
 
-  let nombre = document.querySelector('.name');
-  let mail = document.querySelector('.mail');
-  let telf = document.querySelector('.phone');
-  var presu = document.querySelector('.budget');
-  let info = document.querySelector('.info');
-  let btnContact = document.querySelector('.btnContact');
-  var x = document.getElementById('message');
-
-  function newInfo() {
-
-      let name = nombre.value;
-      let email = mail.value;
-      let phone = telf.value;
-      var budget = presu.value;
-
-
-      if ((phone.trim().length == 0) || (name.trim().length == 0) || (email.trim().length == 0)) {
-          window.alert("Los campos nombre, email y telefono no pueden estar vacios");
-          x.style.display = 'none';
-      } else {
-          document.getElementById("fieldName").value = "";
-          document.getElementById("fieldPhone").value = "";
-          document.getElementById("fieldEmail").value = "";
-          document.getElementById("fieldBudget").value = "";
-          document.getElementById("fieldInfo").value = "";
-          x.style.display = 'block';
-      }
-  }
-
-  function barcelona1() {
-    document.getElementById('visor').style.backgroundImage = "url(https://firebasestorage.googleapis.com/v0/b/imagenes-web-258e1.appspot.com/o/barcelona1.jpg?alt=media&token=62592f73-634a-4b3c-842d-404f96a7642d)";
-    window.scroll({
-      top: 123,
-      behavior: 'smooth'
-    });
-  }
 
   function barcelona2() {
     document.getElementById('visor').style.backgroundImage = "url(https://firebasestorage.googleapis.com/v0/b/imagenes-web-258e1.appspot.com/o/barcelona2.jpg?alt=media&token=b6623417-574d-426e-9800-59518f6b2a58)";
