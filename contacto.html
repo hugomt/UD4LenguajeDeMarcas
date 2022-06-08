@@ -5,7 +5,6 @@
     <link rel="stylesheet" href="css\lightbox.min.css.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="js\app.js"></script>
     <link rel="stylesheet" href="css\contacto.css">
 </head>
 
@@ -139,13 +138,35 @@
           }
       }
     
-      function barcelona1() {
-        document.getElementById('visor').style.backgroundImage = "url(https://firebasestorage.googleapis.com/v0/b/imagenes-web-258e1.appspot.com/o/barcelona1.jpg?alt=media&token=62592f73-634a-4b3c-842d-404f96a7642d)";
-        window.scroll({
-          top: 123,
-          behavior: 'smooth'
-        });
-      }
+      function openDropdown() {
+    var dropdownContent = document.querySelector('.dropdown-content');
+    var svgIcon = document.querySelector('.my-svg');
+    var isOpen = dropdownContent.classList.contains('open');
+
+    if (isOpen) {
+      dropdownContent.classList.remove('open');
+      svgIcon.classList.remove('open');
+    } else {
+      dropdownContent.classList.add('open');
+      svgIcon.classList.add('open');
+    }
+  }
+
+  window.addEventListener('scroll', function (e) {
+    const arrow = document.querySelector('.arrow-up');
+    if (window.scrollY > 100) {
+      arrow.classList.add('visible');
+    } else {
+      arrow.classList.remove('visible');
+    }
+  });
+
+  function _scrollTop() {
+    window.scroll({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
     
     </script>
 
