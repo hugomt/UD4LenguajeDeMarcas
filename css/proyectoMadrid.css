@@ -12,9 +12,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-
-    overflow-x: hidden;
- 
+  overflow-x: hidden;
 }
 
 .firstDiv {
@@ -83,7 +81,6 @@ header {
 h1 {
   font-family: "Playfair Display", Georgia, serif;
   color: white;
-
 }
 
 nav {
@@ -99,7 +96,6 @@ nav {
   padding: 0;
   filter: brightness(200%);
 }
-
 
 .secondsButtons:hover {
   border-bottom: 3px solid grey;
@@ -189,8 +185,6 @@ h2 {
   margin-top: 5px;
 }
 
-
-
 h3 {
   color: white;
   font-family: "Playfair Display", Georgia, serif;
@@ -224,7 +218,6 @@ h3 {
   cursor: pointer;
   margin-left: 1px;
   margin-top: 1px;
-
 }
 
 .divCloseImage {
@@ -232,7 +225,6 @@ h3 {
   width: 1000px;
   margin-bottom: 5px;
   display: flex;
-
 }
 
 .dropdown-content {
@@ -546,8 +538,6 @@ footer {
     align-self: center;
   }
 
-
-
 }
 
 
@@ -595,13 +585,9 @@ footer {
   object-position: center center;
 }
 
-
-
-
-    .centerText {
+.centerText {
         margin-right: 44%;
-    }
-
+ }
 
 h1 {
   color: white;

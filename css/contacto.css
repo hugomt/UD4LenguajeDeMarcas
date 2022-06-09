@@ -1,42 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@200&family=Roboto+Flex:opsz,wght@8..144,200;8..144,400&display=swap');
-*{
-padding: 0;
-margin: 10px;
-box-sizing: border-box;
 
+* {
+    padding: 0;
+    margin: 10px;
+    box-sizing: border-box;
 }
 
-body{
-overflow-x: hidden;
-
+body {
+    overflow-x: hidden;
 }
 
-.gallery-container{
-width: 80%;
-margin: 100px auto;
-padding: 10px;
-
-display: grid;
-grid-template-columns: repeat(3 , 1fr);
-grid-template-rows: repeat(2, 300px);
+.gallery-container {
+    width: 80%;
+    margin: 100px auto;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 300px);
 }
 
-.gallery-container .gallery-card{
-overflow: hidden;
+.gallery-container .gallery-card {
+    overflow: hidden;
 }
 
 .gallery-container .gallery-card a {
-width: 100%;
-height: 100%;
-
+    width: 100%;
+    height: 100%;
 }
 
-.gallery-container .gallery-card a > img {
-width: 100%;
-height: 100%;
-
+.gallery-container .gallery-card a>img {
+    width: 100%;
+    height: 100%;
 }
 
 * {
@@ -50,8 +46,6 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-
-
 }
 
 .firstDiv {
@@ -59,7 +53,6 @@ body {
     display: flex;
     height: 100px;
     justify-content: space-between;
-
 }
 
 
@@ -113,7 +106,7 @@ header {
     margin-top: 7px;
     margin-left: 80px;
     font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
-            font-size: 14px;
+    font-size: 14px;
     color: white;
     padding-top: 20px;
 }
@@ -123,7 +116,6 @@ h3 {
     font-family: "Playfair Display", Georgia, serif;
     color: white;
     font-weight: lighter;
-
 }
 
 nav {
@@ -262,7 +254,6 @@ h3 {
     display: flex;
     margin-left: 20px;
     margin-top: 15px;
-
 }
 
 .dropdown-content {
@@ -271,8 +262,6 @@ h3 {
     width: 160px;
     margin-top: 177px;
     margin-left: 189px;
-
-
 }
 
 .dropdown-content.open {
@@ -288,7 +277,6 @@ h3 {
     margin-left: 17px;
     width: 170px;
     padding-top: 9px;
-
 }
 
 .dropdown-menu li {
@@ -391,14 +379,12 @@ h3 {
 }
 
 @media (max-width: 830px) {
-
-  
     .footer-bottom {
-      height: 120px;
-      align-items: center;
-      display: flex;
-  }
+        height: 120px;
+        align-items: center;
+        display: flex;
     }
+}
 
 
 @media (max-width: 980px) {
@@ -407,16 +393,16 @@ h3 {
     }
 
     @media (max-width: 830px) {
-  .position {
-    margin-left: 10px;
-  }
+        .position {
+            margin-left: 10px;
+        }
 
-  .footer-bottom {
-    height: 120px;
-    align-items: center;
-    display: flex;
-}
-  }
+        .footer-bottom {
+            height: 120px;
+            align-items: center;
+            display: flex;
+        }
+    }
 
     section {
         margin-left: 100px;
@@ -448,7 +434,6 @@ h3 {
     .sidebar.open {
         left: 70%;
     }
-
 
     .h1 {
         margin-left: 10px;
@@ -510,7 +495,6 @@ h3 {
 .divForm ul li .field-style:focus {
     box-shadow: 0 0 5px rgba(111, 126, 143, 255);
     border: 1px solid grey;
-
 }
 
 .divForm ul li .field-split {
@@ -545,7 +529,6 @@ h3 {
     font-family: "Playfair Display", Georgia, serif;
     font-weight: bold;
     border: 1.5px solid #ffffff;
-
 }
 
 .divForm ul li input[type="button"] {
@@ -630,16 +613,13 @@ footer {
     color: #fff;
     border: 1.1px solid white;
     padding: 5px;
-
     border-radius: 50%;
-
 }
 
 .socials a i {
     font-size: 1.1rem;
     width: 20px;
     transition: color .4s ease;
-
 }
 
 .socials a:hover i {
@@ -677,7 +657,6 @@ footer {
 
 .footer-menu {
     float: right;
-
 }
 
 .footer-menu ul {
@@ -687,7 +666,6 @@ footer {
 .footer-menu ul li {
     padding-right: 13px;
     display: block;
-
 }
 
 .footer-menu ul li a {
@@ -717,7 +695,7 @@ hr {
     margin-bottom: 30px;
     background-color: white;
     border-width: 0px;
-    
+
 }
 
 .fab {
@@ -736,18 +714,16 @@ hr {
     background: none;
     border: none;
     padding: 0px;
-    
-    }
+}
 
-    .fa-whatsapp:before {
-        content: none;
-    }
-    
-    .fab:hover {
+.fa-whatsapp:before {
+    content: none;
+}
+
+.fab:hover {
     opacity: 0.9;
-    }
-    
-    .fa-whatsapp {
-    
+}
+
+.fa-whatsapp {
     color: white;
-    }
+}

@@ -75,13 +75,11 @@ header {
   font-size: 14px;
   color: white;
   padding-top: 20px;
-
 }
 
 h1 {
   font-family: "Playfair Display", Georgia, serif;
   color: white;
-
 }
 
 nav {
@@ -187,8 +185,6 @@ h2 {
   margin-top: 5px;
 }
 
-
-
 h3 {
   color: white;
   font-family: "Playfair Display", Georgia, serif;
@@ -222,7 +218,6 @@ h3 {
   cursor: pointer;
   margin-left: 1px;
   margin-top: 1px;
-
 }
 
 .divCloseImage {
@@ -230,7 +225,6 @@ h3 {
   width: 1000px;
   margin-bottom: 5px;
   display: flex;
-
 }
 
 .dropdown-content {
@@ -262,7 +256,6 @@ h3 {
   background-clip: padding-box;
   height: 87px;
   margin-left: 23px;
-
 }
 
 .dropdownMenu li {
@@ -503,8 +496,6 @@ footer {
     display: none;
   }
 
-  
-
   .footer-bottom{
     height: 120px;
   }
@@ -543,7 +534,6 @@ footer {
   }
 
 }
-
 
 .logo:hover {
   cursor: pointer;
@@ -587,13 +577,9 @@ footer {
   object-position: center center;
 }
 
-
-
-
 .centerText {
   margin-right: 44%;
 }
-
 
 h1 {
   color: white;
@@ -641,10 +627,8 @@ h1 {
 }
 
 .sectionMaps {
- 
   background-color: rgba(40, 40, 43, 255);
   display: flex;
- 
 }
 
 iframe {

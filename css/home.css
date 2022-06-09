@@ -73,7 +73,6 @@ h1,
 h3 {
   font-family: "Playfair Display", Georgia, serif;
   color: white;
-
 }
 
 nav {
@@ -204,7 +203,6 @@ h3 {
   border-bottom: 2px solid grey;
   border-left: 2px solid grey;
   flex-direction: column;
-
 }
 
 .sidebar.open {
@@ -212,13 +210,11 @@ h3 {
 }
 
 .closeImage {
-
   height: 20px;
   width: 20px;
   cursor: pointer;
   margin-left: 1px;
   margin-top: 1px;
-
 }
 
 .divCloseImage {
@@ -226,7 +222,6 @@ h3 {
   width: 1000px;
   margin-bottom: 5px;
   display: flex;
-
 }
 
 .dropdown-content {
@@ -321,7 +316,6 @@ h3 {
 .titleDesign {
   align-self: center;
   margin-top: 100px;
-
 }
 
 .prgphDesign {
@@ -336,20 +330,17 @@ h3 {
 .centerText {
   text-align: center;
   font-size: 2cm;
-
 }
 
 body {
   overflow-x: hidden;
   box-sizing: border-box;
-
 }
 
 
 
 .logo:hover {
   cursor: pointer;
-
 }
 
 .divCarousel {
@@ -384,7 +375,6 @@ footer {
   background: rgba(40, 40, 43, 255);
   height: auto;
   width: 100vw;
-
   padding-top: 40px;
   color: #fff;
 }
@@ -429,21 +419,17 @@ footer {
   color: #fff;
   border: 1.1px solid white;
   padding: 5px;
-
   border-radius: 50%;
-
 }
 
 .socials a i {
   font-size: 1.1rem;
   width: 20px;
   transition: color .4s ease;
-
 }
 
 .socials a:hover i {
   color: rgba(111, 126, 143, 255);
-
 }
 
 .footer-bottom {
@@ -475,7 +461,6 @@ footer {
 
 .footer-menu {
   float: right;
-
 }
 
 .footer-menu ul {
@@ -485,7 +470,6 @@ footer {
 .footer-menu ul li {
   padding-right: 13px;
   display: block;
-
 }
 
 .footer-menu ul li a {
@@ -520,14 +504,11 @@ footer {
     height: 120px;
   }
 
-  
-
   section {
     margin-left: 80px;
     margin-top: 80px;
   }
 
- 
   .menuImage {
     margin-left: 100px;
   }
@@ -555,7 +536,6 @@ footer {
   .secondNav {
     display: flex;
     align-items: center;
-
     cursor: pointer;
   }
 
@@ -627,4 +607,3 @@ footer {
     width: 290px;
   }
 }
-

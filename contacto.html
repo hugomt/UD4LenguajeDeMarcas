@@ -7,8 +7,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css\contacto.css">
 </head>
-
-
 <header class="firstDiv">
     <h1 class="logo" onclick="location.href='index.html'">Modern State</h1>
     <nav>
@@ -106,9 +104,7 @@
         </div>
     </div>
 </footer>
-
 <script>
-
     let nombre = document.querySelector('.name');
       let mail = document.querySelector('.mail');
       let telf = document.querySelector('.phone');
@@ -118,12 +114,10 @@
       var x = document.getElementById('message');
     
       function newInfo() {
-    
           let name = nombre.value;
           let email = mail.value;
           let phone = telf.value;
           var budget = presu.value;
-    
     
           if ((phone.trim().length == 0) || (name.trim().length == 0) || (email.trim().length == 0)) {
               window.alert("Los campos nombre, email y telefono no pueden estar vacios");
@@ -167,7 +161,6 @@
       behavior: 'smooth'
     });
   }
-    
     </script>
 
 </html>
