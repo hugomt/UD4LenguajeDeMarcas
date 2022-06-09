@@ -469,8 +469,7 @@ footer {
   }
 
   .row {
-    height: 800px;
-    display: flex;
+    height: 950px;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -480,17 +479,29 @@ footer {
     height: 2500px;
 }
 
+.footer-bottom{
+  height: 120px;
+}
+
 .divRow
   section {
     margin-left: 80px;
     margin-top: 80px;
   }
 
-  .sectionMaps {
+
+.sectionMaps {
     background-color: rgba(40, 40, 43, 255);
     display: flex;
     flex-direction: column;
+    margin-top: 2;
+    margin-top: 430px;
     align-items: center;
+    padding: 40px;
+}
+
+.locationText{
+  display: none;
 }
 
 .divMap {
@@ -635,10 +646,10 @@ h1 {
 }
 
 .sectionMaps {
-  height: 600px;
+
   background-color: rgba(40, 40, 43, 255);
   display: flex;
-  flex-direction: row;
+
 }
 
 iframe {

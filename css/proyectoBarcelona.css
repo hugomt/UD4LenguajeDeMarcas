@@ -469,12 +469,11 @@ footer {
   }
 
   .row {
-    height: 800px;
-    display: flex;
+    height: 950px;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-  }
+}
 
   .galleryMadrid {
     height: 2500px;
@@ -490,11 +489,23 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: auto;
+    padding: 40px;
   }
 
   .divMap {
     width: 50%;
     display: contents;
+  }
+
+  .locationText{
+    display: none;
+  }
+
+  
+
+  .footer-bottom{
+    height: 120px;
   }
 }
 
@@ -629,10 +640,10 @@ h1 {
 }
 
 .sectionMaps {
-  height: 600px;
+ 
   background-color: rgba(40, 40, 43, 255);
   display: flex;
-  flex-direction: row;
+ 
 }
 
 iframe {
