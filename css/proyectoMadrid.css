@@ -604,7 +604,7 @@ h1 {
   color: white;
 }
 
-.marco {
+.view {
   background: url(https://firebasestorage.googleapis.com/v0/b/imagenes-web-258e1.appspot.com/o/madrid9.jpg?alt=media&token=423373d2-7903-4e62-b4d1-3dd3ae47aad5);
   align-self: center;
   width: 60%;
@@ -614,7 +614,7 @@ h1 {
   background-size: cover;
 }
 
-.marcoContainer {
+.viewContainer {
   margin-top: 60px;
   margin-bottom: 50px;
   display: flex;
@@ -719,7 +719,7 @@ hr{
 }
 
 @media (max-width: 600px) {
-    .marco {
+    .view {
         width: 90%;
     }
 }
